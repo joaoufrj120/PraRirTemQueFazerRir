@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotationPoint.rotation);
+        bullet.tag = "Bullet";
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(rotationPoint.right * bulletForce, ForceMode2D.Impulse);
     }
