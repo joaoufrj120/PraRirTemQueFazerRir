@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a3c27fd64a70bb247b0fa7747d16efcb, type: 3}
-  m_Color: {r: 0.1894704, g: 0.990566, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.9372946, b: 0.99215686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -129,14 +129,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8209023708259980268}
-  - component: {fileID: 8039241498950836757}
+  - component: {fileID: 8351312358253331442}
   - component: {fileID: 2463497215433662552}
   - component: {fileID: 7732856558715893349}
   - component: {fileID: 7458269730831562132}
   - component: {fileID: 4616163979663940106}
   - component: {fileID: 6729496413258063348}
   m_Layer: 8
-  m_Name: EnemyWeak
+  m_Name: ShooterEnemyWeak
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8039241498950836757
+--- !u!114 &8351312358253331442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8863175861922550015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9a177e748be124c953fac2a00cb90c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ff27f1a97bb35f4da3a95954dbd336f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStrenght: 1
@@ -283,7 +283,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 1.2
-  endReachedDistance: 0.2
+  endReachedDistance: 4.5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0

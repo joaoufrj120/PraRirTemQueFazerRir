@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     private Vector2 lastMoveDirection, stopped;
 
+    private float imunityFrames;
+    private int life = 10000;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,21 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("MoveMagnitude", movement.magnitude);
         anim.SetFloat("LastMoveX", lastMoveDirection.x);
         anim.SetFloat("LastMoveY", lastMoveDirection.y);
+
+        if (imunityFrames > 0)
+        {
+            imunityFrames -= Time.deltaTime;
+        }
     }
-    
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && imunityFrames <= 0)
+        {
+            imunityFrames = 0.5f;
+            life--;
+            Debug.Log(life);
+        }
+    }
+
 }
