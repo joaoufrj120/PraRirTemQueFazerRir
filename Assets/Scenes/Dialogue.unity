@@ -310,22 +310,102 @@ MonoBehaviour:
   dialogue:
     name: Sgt.Ten.Maj. Mouse
     sentences:
-    - "Ei, cara, boa madrugada. Adorei seu olho de estrelinha, Uah\xE1! Documento
-      e habilita\xE7\xE3o pfv."
-    - "Hmmm...  vc tem cara de que est\xE1 voltando de uma festa mto louca nessa
-      foto"
+    - "Ei, cara, boa madrugada. \xC9 eu sei muito bem o que vc est\xE1 pensando"
+    - " Uah\xE1! Documento e habilita\xE7\xE3o pfv."
+    - 'Hmmm...  '
+    - "Vc tem cara de que est\xE1 voltando de uma festa mto louca nessa foto,"
     - "uaH\xC1!"
-    - "Ei, cara, boa madrugada. Adorei seu olho de estrelinha, Uah\xE1! Documento
-      e habilita\xE7\xE3o pfv."
-    - "Ei, cara, boa madrugada. Adorei seu olho de estrelinha, Uah\xE1! Documento
-      e habilita\xE7\xE3o pfv."
+    - "Seguinte, aparentemente me puseram pra fazer essa apari\xE7\xE3o no jogo pra
+      fazer um bico. Me disseram que teria um... "
+    - "abonado bom pra mim aqui, sabe... uaH\xC1!"
+    - "Olha essa cara, todo mundo sabe que voc\xEA t\xE1 no erro, uaH\xC1! Voc\xEA
+      tem cara de..."
     sprites:
     - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
-    - {fileID: 21300000, guid: 3a2034aa7d17dde439d1e9bec8fd6d5d, type: 3}
     - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
-    - {fileID: 21300000, guid: 4e7cd1f39ee6176469eefd039912dd3e, type: 3}
-    - {fileID: 21300000, guid: 72e0e4357107449499f59c43c241cd4e, type: 3}
-    choices: 0101000100
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    choices: 0001000000000000
+--- !u!1 &136613391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136613392}
+  - component: {fileID: 136613394}
+  - component: {fileID: 136613393}
+  m_Layer: 5
+  m_Name: Mouse Smile blink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &136613392
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136613391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 676385292}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000038147, y: -77.589}
+  m_SizeDelta: {x: 747.653, y: 924.8227}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &136613393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136613391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 72e0e4357107449499f59c43c241cd4e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &136613394
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136613391}
+  m_CullTransparentMesh: 1
 --- !u!1 &317490201
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,13 +655,157 @@ RectTransform:
   m_Children:
   - {fileID: 835483552}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &565948380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565948381}
+  - component: {fileID: 565948383}
+  - component: {fileID: 565948382}
+  m_Layer: 5
+  m_Name: Mouse Image blink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &565948381
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565948380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 676385292}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000038147, y: -77.589}
+  m_SizeDelta: {x: 747.653, y: 924.8227}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565948382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565948380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3a2034aa7d17dde439d1e9bec8fd6d5d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &565948383
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565948380}
+  m_CullTransparentMesh: 1
+--- !u!1 &574775990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 574775992}
+  - component: {fileID: 574775991}
+  m_Layer: 5
+  m_Name: Dialogos 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &574775991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574775990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad078a90add59f04395481fe4afd6732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Sgt.Ten.Maj. Mouse
+    sentences:
+    - "\xC9 o que? Cara, essa casualidade provocou uma necessidade de fazermos um
+      biz\xFA entre n\xF3s aqui..."
+    - "a gente pode t\xE1 resolvendo essa situa\xE7\xE3o de uma maneira mais alternativa..."
+    - "...para os dois lados, compreende? UaH\xC1!"
+    - "\xD3timo! N\xE3o quero bancar um coice de mula com o mundo inteiro me vendo
+      aqui n\xE9!?"
+    - "Eu poderia muito bem te dar uma biabada, uaH\xC1! "
+    - "Pelo contr\xE1rio, quero mostrar que policiais podem ser divertidos, uaH\xC1!"
+    sprites:
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    choices: 000001000001
+--- !u!224 &574775992
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574775990}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 536, y: 962}
+  m_SizeDelta: {x: 555.8103, y: 140.1451}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &603575998
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +902,7 @@ GameObject:
   - component: {fileID: 676385295}
   - component: {fileID: 676385294}
   - component: {fileID: 676385293}
+  - component: {fileID: 676385296}
   m_Layer: 5
   m_Name: Mouse Panel
   m_TagString: Untagged
@@ -698,6 +923,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1536504525}
+  - {fileID: 565948381}
+  - {fileID: 1786657933}
+  - {fileID: 136613392}
+  - {fileID: 704295563}
   m_Father: {fileID: 835483552}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -767,6 +996,102 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!95 &676385296
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676385291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e45b7003a32f519429ef2fcb87972f3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &704295562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704295563}
+  - component: {fileID: 704295565}
+  - component: {fileID: 704295564}
+  m_Layer: 5
+  m_Name: Mouse Closed Eyes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &704295563
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704295562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 676385292}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000038147, y: -77.589}
+  m_SizeDelta: {x: 747.653, y: 924.8227}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &704295564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704295562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3a2034aa7d17dde439d1e9bec8fd6d5d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &704295565
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704295562}
+  m_CullTransparentMesh: 1
 --- !u!1 &835483551
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +1173,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835483551}
   m_CullTransparentMesh: 1
+--- !u!1 &846310466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846310468}
+  - component: {fileID: 846310467}
+  m_Layer: 5
+  m_Name: Dialogos 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &846310467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846310466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad078a90add59f04395481fe4afd6732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Sgt.Ten.Maj. Mouse
+    sentences:
+    - "Ainda mais com cara de rato, uaH\xC1"
+    - "Voc\xEA est\xE1 muito baratinado, mas vamos logo com isso. \n"
+    - "Eu t\xF4 com uma completa espetacular na barca e a..."
+    sprites:
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    choices: 000000
+--- !u!224 &846310468
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846310466}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 536, y: 962}
+  m_SizeDelta: {x: 555.8103, y: 140.1451}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &847688791
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1367,128 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847688791}
   m_CullTransparentMesh: 1
+--- !u!1 &967615774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967615776}
+  - component: {fileID: 967615775}
+  m_Layer: 5
+  m_Name: Dialogos 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &967615775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967615774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad078a90add59f04395481fe4afd6732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Sgt.Ten.Maj. Mouse
+    sentences:
+    - "...um caranguejo dos grandes. Aqueles que roubam carros por pura emo\xE7\xE3o,
+      uaH\xC1!"
+    - "Acha que esses olhos de estrelinhas me enganam, uaH\xC1?"
+    sprites:
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    choices: 0001
+--- !u!224 &967615776
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967615774}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 536, y: 962}
+  m_SizeDelta: {x: 555.8103, y: 140.1451}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &997589179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997589181}
+  - component: {fileID: 997589180}
+  m_Layer: 5
+  m_Name: Dialogos 6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &997589180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997589179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad078a90add59f04395481fe4afd6732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Sgt.Ten.Maj. Mouse
+    sentences:
+    - "Mas pera a\xEA \xF4... "
+    - "amig\xE3o esquisito que parece ter voltado de uma feira de lobotomiza\xE7\xE3o 
+      e agora s\xF3 fala \"Sim, senhor!\" \n"
+    - "Eu n\xE3o vou te deitar, n\xE3o precisa arrastar o p\xE9, eu s\xF3 quero meu..."
+    - "abonado, uaH\xC1!"
+    sprites:
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    choices: 00000001
+--- !u!224 &997589181
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997589179}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 536, y: 962}
+  m_SizeDelta: {x: 555.8103, y: 140.1451}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &997931588
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +1500,7 @@ GameObject:
   - component: {fileID: 997931589}
   - component: {fileID: 997931591}
   - component: {fileID: 997931590}
+  - component: {fileID: 997931592}
   m_Layer: 5
   m_Name: Bg Image
   m_TagString: Untagged
@@ -1058,6 +1566,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997931588}
   m_CullTransparentMesh: 1
+--- !u!95 &997931592
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997931588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09511135b9d5c704cb7c74295cb48feb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1081087163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,7 +1832,7 @@ MonoBehaviour:
   continuar: {fileID: 847688791}
   sim: {fileID: 317490201}
   animator: {fileID: 2065281149}
-  onGoing: 0
+  index: 0
 --- !u!4 &1202407909
 Transform:
   m_ObjectHideFlags: 0
@@ -1499,8 +2027,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7af1d0fe8cf5541bf6aab2d0388e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DM: {fileID: 0}
+  DM: {fileID: 1202407908}
   dialogo1: {fileID: 129908837}
+  dialogo2: {fileID: 967615775}
+  dialogo3: {fileID: 574775991}
+  dialogo4: {fileID: 846310467}
+  dialogo5: {fileID: 1701491816}
+  dialogo6: {fileID: 997589180}
+  dialogo7: {fileID: 0}
+  pecanha: {fileID: 676385296}
 --- !u!1 &1377142971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +2101,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536504524
 GameObject:
@@ -1673,7 +2208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1587952591
 GameObject:
@@ -1809,6 +2344,146 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587952591}
+  m_CullTransparentMesh: 1
+--- !u!1 &1701491815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1701491817}
+  - component: {fileID: 1701491816}
+  m_Layer: 5
+  m_Name: Dialogos 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1701491816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701491815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad078a90add59f04395481fe4afd6732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Sgt.Ten.Maj. Mouse
+    sentences:
+    - "Cristina me espera. A forma que vc tem de se livrar dessa  aqui, \xE9..."
+    - 'indo pegar a coxinha pra mim!
+
+'
+    - "uH\xC1. Pega l\xE1, uH\xC1!"
+    - "Para rir, tem que fazer rir! N\xE3o \xE9 mesmo!?"
+    sprites:
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: 7a17748222613ae429b15956b531e77f, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    - {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+    choices: 00000001
+--- !u!224 &1701491817
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701491815}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 536, y: 962}
+  m_SizeDelta: {x: 555.8103, y: 140.1451}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1786657932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786657933}
+  - component: {fileID: 1786657935}
+  - component: {fileID: 1786657934}
+  m_Layer: 5
+  m_Name: Mouse Smile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1786657933
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786657932}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 676385292}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000038147, y: -77.589}
+  m_SizeDelta: {x: 747.653, y: 924.8227}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1786657934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786657932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c24dfa9ef980f7e4aa8236c6e372485e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1786657935
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786657932}
   m_CullTransparentMesh: 1
 --- !u!1 &2065281145
 GameObject:
