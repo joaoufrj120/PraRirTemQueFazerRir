@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyShooter : MonoBehaviour
 {
     [Range(1, 3)]
     public int enemyStrenght;
@@ -40,7 +40,6 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("X" + collision.gameObject.tag + "Y");
         if (collision.gameObject.CompareTag("Bullet") && imunityFrames <= 0){
             imunityFrames = 0.5f;
             life--;
