@@ -5,9 +5,26 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    public DialogueTrigger dialogos1;
+    public DialogueManager DM;
+    public DialogueTrigger dialogo1;
+   
     void Start()
     {
-        dialogos1.TriggerDialogue();
+        StartCoroutine(Esperar());
     }
+
+    IEnumerator Esperar()
+    {
+        yield return new WaitForSeconds(5);
+        dialogo1.TriggerDialogue();
+    }
+
+    void Update()
+    {
+        if (DM.onGoing == false)
+        {
+
+        }   
+    }
+
 }

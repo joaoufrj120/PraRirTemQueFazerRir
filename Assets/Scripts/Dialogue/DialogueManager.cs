@@ -19,6 +19,8 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    public bool onGoing = false;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -33,6 +35,7 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
+        onGoing = true;
 
 
         sentences.Clear();
@@ -61,6 +64,7 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             animator.SetBool("IsOpen", false);
+            onGoing = false;
             return;
         }
 
