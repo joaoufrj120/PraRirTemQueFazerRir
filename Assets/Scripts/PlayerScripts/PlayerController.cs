@@ -6,13 +6,13 @@ public class PlayerController : MonoBehaviour
 {
 
     public Rigidbody2D player;
-    public float speed;
+    public float speed, timerDamage;
 
     Animator anim;
     private Vector2 lastMoveDirection, stopped;
 
     private float imunityFrames;
-    private int life = 10000;
+    private float hungerTimer = 300f;
 
     // Start is called before the first frame update
     void Start()
@@ -43,13 +43,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if(hungerTimer > 0)
+        {
+            hungerTimer -= Time.deltaTime;
+            Debug.Log(hungerTimer);
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && imunityFrames <= 0)
         {
             imunityFrames = 0.5f;
-            life--;
-            Debug.Log(life);
+            hungerTimer -= timerDamage;
+            
         }
     }
 

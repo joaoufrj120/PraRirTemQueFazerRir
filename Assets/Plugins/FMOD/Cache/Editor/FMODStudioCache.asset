@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD Project/PraRirTemQueFazerRir/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419907634405120
+  lastModified: 638419987968122521
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -41,7 +41,7 @@ MonoBehaviour:
   - {fileID: -4435353377764546551}
   StringsBanks:
   - {fileID: 4155748276115350106}
-  cacheTime: 638419907634464961
+  cacheTime: 638419987968133433
   cacheVersion: 131591
 --- !u!114 &4155748276115350106
 MonoBehaviour:
@@ -58,7 +58,7 @@ MonoBehaviour:
   Path: FMOD Project/PraRirTemQueFazerRir/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419907634464961
+  lastModified: 638419987968133433
   FileSizes:
   - Name: Desktop
     Value: 712
