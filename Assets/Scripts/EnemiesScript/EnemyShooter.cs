@@ -7,6 +7,8 @@ public class EnemyShooter : MonoBehaviour
 {
     [Range(1, 3)]
     public int enemyStrenght;
+    [Range(1f, 10f)]
+    public float velocity;
     private float imunityFrames;
     //EnemyStats
     private int life;
@@ -18,15 +20,15 @@ public class EnemyShooter : MonoBehaviour
         {
             case (1):
                 life = 1;
-                GetComponent<AIPath>().maxSpeed = 2;
+                GetComponent<AIPath>().maxSpeed = velocity;
                 break;
             case (2):
                 life = 2;
-                GetComponent<AIPath>().maxSpeed = 4;
+                GetComponent<AIPath>().maxSpeed = velocity;
                 break;
             case (3):
                 life = 3;
-                GetComponent<AIPath>().maxSpeed = 3;
+                GetComponent<AIPath>().maxSpeed = velocity;
                 break;
         }
     }
