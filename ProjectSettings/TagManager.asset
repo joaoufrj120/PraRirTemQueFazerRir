@@ -49,6 +49,9 @@ TagManager:
   - name: Ground
     uniqueID: 4168678633
     locked: 0
+  - name: "M\xF3veis"
+    uniqueID: 2248719019
+    locked: 0
   - name: Player
     uniqueID: 3375690717
     locked: 0
