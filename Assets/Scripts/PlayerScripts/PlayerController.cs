@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private float imunityFrames;
     private float hungerTimer = 300f;
+    public float HungerTimer {get => hungerTimer; }
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if(hungerTimer > 0)
         {
-            hungerTimer -= Time.deltaTime;
+            hungerTimer -= Time.fixedDeltaTime;
         }
         else if(hungerTimer <= 0) 
         {

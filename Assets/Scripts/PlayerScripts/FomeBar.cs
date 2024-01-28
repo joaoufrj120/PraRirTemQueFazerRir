@@ -7,6 +7,8 @@ public class FomeBar : MonoBehaviour
 {
     public Slider slider;
 
+    [SerializeField] private PlayerController playerController;
+
     public void SetMaxFome(float fome)
     {
         slider.maxValue = fome;
@@ -16,5 +18,13 @@ public class FomeBar : MonoBehaviour
     public void Fome(float fome)
     {
         slider.value = fome;
+    }
+
+    private void Start() {
+        SetMaxFome(playerController.HungerTimer);
+    }
+
+    private void Update() {
+        Fome(playerController.HungerTimer);
     }
 }

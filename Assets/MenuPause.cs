@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour
 {
-
     public void Pause()
     {
         Time.timeScale = 0.0f;
