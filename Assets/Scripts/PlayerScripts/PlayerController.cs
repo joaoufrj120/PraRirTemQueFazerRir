@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && imunityFrames <= 0)
+        if ((collision.gameObject.CompareTag("Enemy")) && imunityFrames <= 0)
         {
             imunityFrames = 0.5f;
             hungerTimer -= timerDamage;
