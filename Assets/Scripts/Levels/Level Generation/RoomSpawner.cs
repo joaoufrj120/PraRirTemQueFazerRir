@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RoomSpawner : MonoBehaviour
 {
     [SerializeField] private float _xMultiplier = 10f, _yMultiplier = 10f;
     private Transform _parent;
-    [SerializeField] private GameObject StartRoom,T,L,R,B, TL,TR,TB,LR,LB,RB, TLR, TLB, TRB, LRB, Cross;
+    [SerializeField] private RoomManager StartRoom,T,L,R,B, TL,TR,TB,LR,LB,RB, TLR, TLB, TRB, LRB, Cross;
+    [SerializeField] private GameObject _endPortal;
 
     private Dictionary<Vector2Int,RoomManager> _instantiatedRooms = new Dictionary<Vector2Int, RoomManager>();
 
@@ -24,84 +26,105 @@ public class RoomSpawner : MonoBehaviour
 
             SpawnRoom(position,room);
         }
+
+        AddConnections(rooms);
     }
 
     public void SpawnRoom(Vector2Int position, LevelGenerator.Room room){
-        Vector3 realPosition = new Vector3(position.x * _xMultiplier, position.y * _yMultiplier, 0);
-
 
         if(room.Doors[Vector2Int.up]){
             if(room.Doors[Vector2Int.left]){
                 if(room.Doors[Vector2Int.right]){
                     if(room.Doors[Vector2Int.down]){
-                        InstantiateRoom(Cross, realPosition, room);
+                        InstantiateRoom(Cross, position, room);
                         return;
                     }
-                    InstantiateRoom(TLR, realPosition, room);
+                    InstantiateRoom(TLR, position, room);
                     return;
                 } else if(room.Doors[Vector2Int.down]){
-                   InstantiateRoom(TLB, realPosition, room);
+                   InstantiateRoom(TLB, position, room);
                    return;
                 }
-                InstantiateRoom(TL, realPosition, room);
+                InstantiateRoom(TL, position, room);
                 return;
             }     
             if(room.Doors[Vector2Int.right]){
                 if(room.Doors[Vector2Int.down]){
-                    InstantiateRoom(TRB, realPosition, room);
+                    InstantiateRoom(TRB, position, room);
                     return;
                 }
-                InstantiateRoom(TR, realPosition, room);
+                InstantiateRoom(TR, position, room);
                 return;
             }
             if(room.Doors[Vector2Int.down]){
-                InstantiateRoom(TB, realPosition, room);
+                InstantiateRoom(TB, position, room);
                 return;
             }
-            InstantiateRoom(T, realPosition, room);
+            InstantiateRoom(T, position, room);
             return;
         }
         if(room.Doors[Vector2Int.left]){
             if(room.Doors[Vector2Int.right]){
                 if(room.Doors[Vector2Int.down]){
-                    InstantiateRoom(LRB, realPosition, room);
+                    InstantiateRoom(LRB, position, room);
                     return;
                 }
-                InstantiateRoom(LR, realPosition, room);
+                InstantiateRoom(LR, position, room);
                 return;
             }
             if(room.Doors[Vector2Int.down]){
-                InstantiateRoom(LB, realPosition, room);
+                InstantiateRoom(LB, position, room);
                 return;
             }
-            InstantiateRoom(L, realPosition, room);
+            InstantiateRoom(L, position, room);
             return;
         }
         if(room.Doors[Vector2Int.right]){
             if(room.Doors[Vector2Int.down]){
-                InstantiateRoom(RB, realPosition, room);
+                InstantiateRoom(RB, position, room);
                 return;
             }
-            InstantiateRoom(R, realPosition, room);
+            InstantiateRoom(R, position, room);
             return;
         }
-        InstantiateRoom(B, realPosition, room);
+        InstantiateRoom(B, position, room);
     }
 
-    void InstantiateRoom(GameObject original, Vector3 position, LevelGenerator.Room room){
+    void InstantiateRoom(RoomManager original, Vector2Int position, LevelGenerator.Room room){
+        Vector3 realPosition = new Vector3(position.x * _xMultiplier, position.y * _yMultiplier, 0);
+        RoomManager realRoom;
 
         if(room.Type == RoomType.StartRoom && StartRoom != null){
-            Instantiate(StartRoom, position, Quaternion.identity,_parent);
+            realRoom = Instantiate(StartRoom, realPosition, Quaternion.identity,_parent);
+            _instantiatedRooms.Add(position,realRoom);
             return;
         }
+        realRoom = Instantiate(original, realPosition, Quaternion.identity,_parent);
+        _instantiatedRooms.Add(position,realRoom);
+
         if(room.Type == RoomType.FinalRoom){
             //criar coisas da sala final
+            Vector3 middle = new Vector3(-2,5,0) + realPosition;
+            Instantiate(_endPortal,middle,Quaternion.identity, realRoom.transform);
         }
-        Instantiate(original, position, Quaternion.identity,_parent);
     }
 
-    void AddConnections(){
-        
+    void AddConnections(Dictionary<Vector2Int, LevelGenerator.Room> rooms){
+        foreach(var item in _instantiatedRooms){
+            Debug.Log("aaaa");
+            RoomManager roomManager = item.Value;
+            Vector2Int position = item.Key;
+
+            foreach(var neighbor in rooms[position].Neighbors){
+                Debug.Log("1");
+                Vector2Int direction = neighbor.Key;
+                RoomManager realNeighbor = _instantiatedRooms[neighbor.Value];
+
+
+                roomManager.AddNeighbor(neighbor.Key,realNeighbor);
+            }
+            
+        }
     }
 
     public void DestroyRooms(){
