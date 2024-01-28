@@ -1492,7 +1492,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\n\n\nBruno Camenietzki - Game Designer\nJessica Duran - Arte\nCarlinhos
     Gon\xE7alves - Roteiro\nSlaziel - C\xF3digo\nTheo Luigi - C\xF3digo\nFilipe Calixto
-    - Arte"
+    - Arte\n\nAgradecimento especial para Kevo Duran e Jo\xE3o Rabello, Musos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a482f500cb27b5148a85dd49922fdbef, type: 2}
   m_sharedMaterial: {fileID: 7774475236316557369, guid: a482f500cb27b5148a85dd49922fdbef, type: 2}
