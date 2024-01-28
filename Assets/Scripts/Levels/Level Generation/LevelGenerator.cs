@@ -2,6 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+public enum RoomType{
+    StartRoom,
+    EnemyRoom,
+    FinalRoom
+}
+
 public class LevelGenerator : MonoBehaviour
 {
     #region Classes
@@ -22,11 +28,21 @@ public class LevelGenerator : MonoBehaviour
             {new Vector2Int(-1,0), false},
             {new Vector2Int(1,0), false}
         };
+
+        //<direção,posição>
+        public Dictionary<Vector2Int,Vector2Int> Neighbors = new Dictionary<Vector2Int, Vector2Int>();
+
+        public RoomType Type;
+
+        public Room(RoomType _type = RoomType.EnemyRoom){
+            Type = _type;
+        }
     }
     #endregion
 
     #region  Exposed Variables
     [SerializeField] private int _maxRoomsApprox = 15;
+    [SerializeField] private int _minRooms = 5;
     [SerializeField] private RoomSpawner _roomSpawner;
     [SerializeField] private int _seed = 70;
     [SerializeField] private bool _useSeed;
@@ -35,7 +51,6 @@ public class LevelGenerator : MonoBehaviour
     public static DefaultDirections Directions = new DefaultDirections();
     private int _dictionaryIndex;
     private Dictionary<Vector2Int, Room> _mapRooms = new Dictionary<Vector2Int, Room>();
-
 
 
     [ContextMenu("Generate")]
@@ -47,16 +62,13 @@ public class LevelGenerator : MonoBehaviour
             Random.InitState((int)System.DateTime.Now.Ticks);
         }
 
-
         _mapRooms.Clear();
         _roomSpawner.DestroyRooms();
 
         //Setup da primeira sala
-        Room startRoom = new Room();
+        Room startRoom = new Room(RoomType.StartRoom);
         startRoom.Doors[Directions.Bottom] = true;
         _mapRooms.Add(Vector2Int.zero, startRoom);
-        
-        _roomSpawner.SpawnRoom(Vector2Int.zero,startRoom);//Instanciar primeira sala
 
         _dictionaryIndex = 0;//Reset do index
 
@@ -74,12 +86,21 @@ public class LevelGenerator : MonoBehaviour
                 DictionaryIteration();
             }
         }
+
+        if(!IsBigEnough() && !_useSeed){
+            Generate();
+            return;
+        }
+
+        FindFinalRoom();
+
+        _roomSpawner.SpawnLevel(_mapRooms);
     }
 
     void DictionaryIteration(){
-        for(int j = _dictionaryIndex, count = _mapRooms.Count; j < count; j++){
+        for(int i = _dictionaryIndex, count = _mapRooms.Count; i < count; i++){
             //Debug.Log("j:" + j + ". count: " + count + ". map.rooms.count: " + _mapRooms.Count + ". dicI: " + _dictionaryIndex);
-            var item = _mapRooms.ElementAt(j);
+            var item = _mapRooms.ElementAt(i);
             Room room = item.Value;
             Vector2Int roomPos = item.Key;
 
@@ -109,7 +130,8 @@ public class LevelGenerator : MonoBehaviour
 
         _mapRooms.Add(position,newRoom);
 
-        _roomSpawner.SpawnRoom(position,newRoom);
+        //_roomSpawner.SpawnRoom(position,newRoom);
+        
 
         //Debug.Log("Room: " + _mapRooms.Count + ", pos: " + position + ". Top: " + newRoom.Doors[Directions.Top] + ", Bottom: " + newRoom.Doors[Directions.Bottom] + ", Left: " + newRoom.Doors[Directions.Left] + ", Right: "+ newRoom.Doors[Directions.Right]);
     }
@@ -118,6 +140,7 @@ public class LevelGenerator : MonoBehaviour
         Vector2Int targetPosition = originalPosition + direction;
 
         if(_mapRooms.TryGetValue(targetPosition, out Room neighbor)){
+            ConnectRooms(originalPosition,direction,targetPosition);
             if(neighbor.Doors[-direction]){
                 return true;
             }
@@ -139,6 +162,30 @@ public class LevelGenerator : MonoBehaviour
         }
 
         return RandomBoolean();
+    }
+
+    void ConnectRooms(Vector2Int position1, Vector2Int direction, Vector2Int position2){
+        //conectar salas
+    }
+
+    void FindFinalRoom(){
+        for(int i = _mapRooms.Count-1; i >= 0; i--){
+            var item = _mapRooms.ElementAt(i);
+            Room room = item.Value;
+
+            int doorCount = room.Doors.Count(doors => doors.Value == true);
+
+            if(doorCount == 1 && !room.Doors[Directions.Bottom]){
+                //Debug.Log(item.Key);
+
+                _mapRooms.ElementAt(i).Value.Type = RoomType.FinalRoom;
+                break;
+            }
+        }
+    }
+
+    bool IsBigEnough(){
+        return _mapRooms.Count >= _minRooms;
     }
 
     private bool RandomBoolean(){

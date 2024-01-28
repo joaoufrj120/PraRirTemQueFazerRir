@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &827230715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _xMultiplier: 10
   _yMultiplier: 10
-  _parent: {fileID: 0}
+  StartRoom: {fileID: 0}
   T: {fileID: 2545413029430570377, guid: 7e34a8b184f20874aae296a9970a5483, type: 3}
   L: {fileID: 3442430519871302900, guid: 40bd5b4cee7352344a55cbcefad6103b, type: 3}
   R: {fileID: 1824563107979079186, guid: 70b47d62ba914f34584b9d5e1b48329a, type: 3}
@@ -300,11 +300,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _xMultiplier: 26
   _yMultiplier: 16
-  _parent: {fileID: 0}
+  StartRoom: {fileID: 5760150106616620096, guid: b0ed6362d3ae6aa479d810c0340eddc6, type: 3}
   T: {fileID: 5760150106616620096, guid: 300b7c5ceed8598499788309f0c5435c, type: 3}
   L: {fileID: 5760150106616620096, guid: 94dfd95941ff6a149965cdce1ed89bf5, type: 3}
   R: {fileID: 5760150106616620096, guid: ed95ec0921b4cb748959897be4b81833, type: 3}
-  B: {fileID: 5760150106616620096, guid: b0ed6362d3ae6aa479d810c0340eddc6, type: 3}
+  B: {fileID: 5723279123718593387, guid: 3923fdc902905ed42a1eae7d27f801ee, type: 3}
   TL: {fileID: 5760150106616620096, guid: a5df29a5139f5594989a909c418d0c6a, type: 3}
   TR: {fileID: 5760150106616620096, guid: 8534d56b0a3aa7e4b8204bc3cf534f8a, type: 3}
   TB: {fileID: 5760150106616620096, guid: 9ba621d81ff25a440b08c90e50db2f7e, type: 3}
@@ -375,11 +375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f91a2473b646f1f488f45163eda1a892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalIterations: 10
   _maxRoomsApprox: 15
-  _startingChance: 1
+  _minRooms: 5
   _roomSpawner: {fileID: 1349267352}
   _seed: 70
   _useSeed: 1
-  i: 0
-  _dictionaryIndex: 0
