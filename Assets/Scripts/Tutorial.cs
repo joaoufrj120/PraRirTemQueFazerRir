@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
@@ -111,5 +112,6 @@ public class Tutorial : MonoBehaviour
         pecanha.SetBool("piscando", true);
         yield return new WaitForSeconds(1.4f);
         //Chamar Scene do jogo
+        SceneManager.LoadScene(2);
     }
 }

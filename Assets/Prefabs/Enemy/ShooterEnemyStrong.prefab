@@ -203,8 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStrenght: 3
-  velocity: 1
-  bulletInterval: 2
+  velocity: 1.5
+  bulletInterval: 1
   bullet: {fileID: 2224078039075487138, guid: ea9777a61ad2c0147bfeeafd4430e3ff, type: 3}
   bulletPos: {fileID: 4522963610379473457}
 --- !u!50 &2463497215433662552
