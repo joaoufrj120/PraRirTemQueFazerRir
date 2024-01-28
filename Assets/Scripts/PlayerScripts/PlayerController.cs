@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
         if(hungerTimer > 0)
         {
             hungerTimer -= Time.deltaTime;
-            Debug.Log(hungerTimer);
         }
     }
 
@@ -59,6 +58,17 @@ public class PlayerController : MonoBehaviour
             imunityFrames = 0.5f;
             hungerTimer -= timerDamage;
             
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.gameObject.CompareTag("EnemyBullet")) && imunityFrames <= 0)
+        {
+            Debug.Log("BUM");
+            imunityFrames = 0.5f;
+            hungerTimer -= timerDamage;
+
         }
     }
 
