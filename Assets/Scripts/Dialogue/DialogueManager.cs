@@ -6,6 +6,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+
     public Queue<string> sentences;
     public Queue<Sprite> sprites;
     public Queue<bool> choices;

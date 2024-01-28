@@ -14,6 +14,8 @@ public class Tutorial : MonoBehaviour
     public DialogueTrigger dialogo6;
     public DialogueTrigger dialogo7;
     public Animator pecanha;
+
+    public GameObject pecachaSprite;
    
     void Start()
     {
@@ -22,9 +24,8 @@ public class Tutorial : MonoBehaviour
 
     IEnumerator Esperar()
     {
-        yield return new WaitForSeconds(1);
- 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
+        pecachaSprite.SetActive(true);
         pecanha.SetBool("pecanhaIdle", true);
 
         dialogo1.TriggerDialogue();
