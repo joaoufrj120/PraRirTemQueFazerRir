@@ -10,6 +10,8 @@ public class RoomSpawner : MonoBehaviour
     private Transform _parent;
     [SerializeField] private GameObject StartRoom,T,L,R,B, TL,TR,TB,LR,LB,RB, TLR, TLB, TRB, LRB, Cross;
 
+    private Dictionary<Vector2Int,RoomManager> _instantiatedRooms = new Dictionary<Vector2Int, RoomManager>();
+
     void Start(){
         _parent = new GameObject().transform;
         _parent.name = "Mapa";
@@ -28,55 +30,55 @@ public class RoomSpawner : MonoBehaviour
         Vector3 realPosition = new Vector3(position.x * _xMultiplier, position.y * _yMultiplier, 0);
 
 
-        if(room.Doors[LevelGenerator.Directions.Top]){
-            if(room.Doors[LevelGenerator.Directions.Left]){
-                if(room.Doors[LevelGenerator.Directions.Right]){
-                    if(room.Doors[LevelGenerator.Directions.Bottom]){
+        if(room.Doors[Vector2Int.up]){
+            if(room.Doors[Vector2Int.left]){
+                if(room.Doors[Vector2Int.right]){
+                    if(room.Doors[Vector2Int.down]){
                         InstantiateRoom(Cross, realPosition, room);
                         return;
                     }
                     InstantiateRoom(TLR, realPosition, room);
                     return;
-                } else if(room.Doors[LevelGenerator.Directions.Bottom]){
+                } else if(room.Doors[Vector2Int.down]){
                    InstantiateRoom(TLB, realPosition, room);
                    return;
                 }
                 InstantiateRoom(TL, realPosition, room);
                 return;
             }     
-            if(room.Doors[LevelGenerator.Directions.Right]){
-                if(room.Doors[LevelGenerator.Directions.Bottom]){
+            if(room.Doors[Vector2Int.right]){
+                if(room.Doors[Vector2Int.down]){
                     InstantiateRoom(TRB, realPosition, room);
                     return;
                 }
                 InstantiateRoom(TR, realPosition, room);
                 return;
             }
-            if(room.Doors[LevelGenerator.Directions.Bottom]){
+            if(room.Doors[Vector2Int.down]){
                 InstantiateRoom(TB, realPosition, room);
                 return;
             }
             InstantiateRoom(T, realPosition, room);
             return;
         }
-        if(room.Doors[LevelGenerator.Directions.Left]){
-            if(room.Doors[LevelGenerator.Directions.Right]){
-                if(room.Doors[LevelGenerator.Directions.Bottom]){
+        if(room.Doors[Vector2Int.left]){
+            if(room.Doors[Vector2Int.right]){
+                if(room.Doors[Vector2Int.down]){
                     InstantiateRoom(LRB, realPosition, room);
                     return;
                 }
                 InstantiateRoom(LR, realPosition, room);
                 return;
             }
-            if(room.Doors[LevelGenerator.Directions.Bottom]){
+            if(room.Doors[Vector2Int.down]){
                 InstantiateRoom(LB, realPosition, room);
                 return;
             }
             InstantiateRoom(L, realPosition, room);
             return;
         }
-        if(room.Doors[LevelGenerator.Directions.Right]){
-            if(room.Doors[LevelGenerator.Directions.Bottom]){
+        if(room.Doors[Vector2Int.right]){
+            if(room.Doors[Vector2Int.down]){
                 InstantiateRoom(RB, realPosition, room);
                 return;
             }
@@ -96,6 +98,10 @@ public class RoomSpawner : MonoBehaviour
             //criar coisas da sala final
         }
         Instantiate(original, position, Quaternion.identity,_parent);
+    }
+
+    void AddConnections(){
+        
     }
 
     public void DestroyRooms(){

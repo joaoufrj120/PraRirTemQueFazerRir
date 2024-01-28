@@ -11,22 +11,13 @@ public enum RoomType{
 public class LevelGenerator : MonoBehaviour
 {
     #region Classes
-    public class DefaultDirections{
-        public readonly Vector2Int Top, Bottom, Left, Right;
-
-        public DefaultDirections(){
-            Top = new Vector2Int(0,1);
-            Bottom = new Vector2Int(0,-1);
-            Left = new Vector2Int(-1,0);
-            Right = new Vector2Int(1,0);
-        }
-    }
+    
     public class Room {
         public Dictionary<Vector2Int,bool> Doors = new Dictionary<Vector2Int, bool>(){
-            {new Vector2Int(0,1), false},
-            {new Vector2Int(0,-1), false},
-            {new Vector2Int(-1,0), false},
-            {new Vector2Int(1,0), false}
+            {Vector2Int.up, false},
+            {Vector2Int.down, false},
+            {Vector2Int.left, false},
+            {Vector2Int.right, false}
         };
 
         //<direção,posição>
@@ -48,7 +39,6 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private bool _useSeed;
     #endregion
 
-    public static DefaultDirections Directions = new DefaultDirections();
     private int _dictionaryIndex;
     private Dictionary<Vector2Int, Room> _mapRooms = new Dictionary<Vector2Int, Room>();
 
@@ -67,7 +57,7 @@ public class LevelGenerator : MonoBehaviour
 
         //Setup da primeira sala
         Room startRoom = new Room(RoomType.StartRoom);
-        startRoom.Doors[Directions.Bottom] = true;
+        startRoom.Doors[Vector2Int.down] = true;
         _mapRooms.Add(Vector2Int.zero, startRoom);
 
         _dictionaryIndex = 0;//Reset do index
@@ -104,17 +94,17 @@ public class LevelGenerator : MonoBehaviour
             Room room = item.Value;
             Vector2Int roomPos = item.Key;
 
-            if(room.Doors[Directions.Top] && !_mapRooms.ContainsKey(roomPos + Directions.Top)){
-                CreateRoom(roomPos + Directions.Top);
+            if(room.Doors[Vector2Int.up] && !_mapRooms.ContainsKey(roomPos + Vector2Int.up)){
+                CreateRoom(roomPos + Vector2Int.up);
             }
-            if(room.Doors[Directions.Bottom] && !_mapRooms.ContainsKey(roomPos + Directions.Bottom)){
-                CreateRoom(roomPos + Directions.Bottom);
+            if(room.Doors[Vector2Int.down] && !_mapRooms.ContainsKey(roomPos + Vector2Int.down)){
+                CreateRoom(roomPos + Vector2Int.down);
             }
-            if(room.Doors[Directions.Left] && !_mapRooms.ContainsKey(roomPos + Directions.Left)){
-                CreateRoom(roomPos + Directions.Left);
+            if(room.Doors[Vector2Int.left] && !_mapRooms.ContainsKey(roomPos + Vector2Int.left)){
+                CreateRoom(roomPos + Vector2Int.left);
             }
-            if(room.Doors[Directions.Right] && !_mapRooms.ContainsKey(roomPos + Directions.Right)){
-                CreateRoom(roomPos + Directions.Right);
+            if(room.Doors[Vector2Int.right] && !_mapRooms.ContainsKey(roomPos + Vector2Int.right)){
+                CreateRoom(roomPos + Vector2Int.right);
             }
             _dictionaryIndex++;
         }
@@ -123,10 +113,10 @@ public class LevelGenerator : MonoBehaviour
     private void CreateRoom(Vector2Int position){
         Room newRoom = new Room();
 
-        newRoom.Doors[Directions.Top] = AssignDoor(position, Directions.Top);
-        newRoom.Doors[Directions.Bottom] = AssignDoor(position, Directions.Bottom);
-        newRoom.Doors[Directions.Left] = AssignDoor(position, Directions.Left);
-        newRoom.Doors[Directions.Right] = AssignDoor(position, Directions.Right);
+        newRoom.Doors[Vector2Int.up] = AssignDoor(position, Vector2Int.up);
+        newRoom.Doors[Vector2Int.down] = AssignDoor(position, Vector2Int.down);
+        newRoom.Doors[Vector2Int.left] = AssignDoor(position, Vector2Int.left);
+        newRoom.Doors[Vector2Int.right] = AssignDoor(position, Vector2Int.right);
 
         _mapRooms.Add(position,newRoom);
 
@@ -140,8 +130,8 @@ public class LevelGenerator : MonoBehaviour
         Vector2Int targetPosition = originalPosition + direction;
 
         if(_mapRooms.TryGetValue(targetPosition, out Room neighbor)){
-            ConnectRooms(originalPosition,direction,targetPosition);
             if(neighbor.Doors[-direction]){
+                ConnectRooms(originalPosition,direction,targetPosition);
                 return true;
             }
             return false;
@@ -166,6 +156,11 @@ public class LevelGenerator : MonoBehaviour
 
     void ConnectRooms(Vector2Int position1, Vector2Int direction, Vector2Int position2){
         //conectar salas
+        Room room2 = _mapRooms[position2];
+        if(room2.Neighbors.ContainsKey(-direction)){
+            _mapRooms[position1].Neighbors.Add(direction,position2);
+            _mapRooms[position2].Neighbors.Add(-direction,position1);
+        }
     }
 
     void FindFinalRoom(){
@@ -175,7 +170,7 @@ public class LevelGenerator : MonoBehaviour
 
             int doorCount = room.Doors.Count(doors => doors.Value == true);
 
-            if(doorCount == 1 && !room.Doors[Directions.Bottom]){
+            if(doorCount == 1 && !room.Doors[Vector2Int.down]){
                 //Debug.Log(item.Key);
 
                 _mapRooms.ElementAt(i).Value.Type = RoomType.FinalRoom;
