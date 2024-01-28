@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D player;
     public float speed, timerDamage;
+    public GameObject menuDerrota;
 
     Animator anim;
     private Vector2 lastMoveDirection, stopped;
@@ -48,6 +49,11 @@ public class PlayerController : MonoBehaviour
         if(hungerTimer > 0)
         {
             hungerTimer -= Time.deltaTime;
+        }
+        else if(hungerTimer <= 0) 
+        {
+            menuDerrota.SetActive(true);
+            Time.timeScale = 0.0f;
         }
     }
 
