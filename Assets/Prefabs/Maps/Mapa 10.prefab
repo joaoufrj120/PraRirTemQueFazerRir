@@ -2977,7 +2977,7 @@ GameObject:
   - component: {fileID: 3812505044238489564}
   - component: {fileID: 4565404212094030239}
   - component: {fileID: 2422258721507770104}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Paredes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5345,7 +5345,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -5417,7 +5417,7 @@ GameObject:
   - component: {fileID: 7360838461026079355}
   - component: {fileID: 2454189420723880556}
   - component: {fileID: 2931602100213519927}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Buraco
   m_TagString: Buraco
   m_Icon: {fileID: 0}
@@ -5795,7 +5795,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:

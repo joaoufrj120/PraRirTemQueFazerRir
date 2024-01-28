@@ -3005,7 +3005,7 @@ GameObject:
   - component: {fileID: 5548584662545770105}
   - component: {fileID: 4481319385717280351}
   - component: {fileID: 3984290964081240187}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Buraco
   m_TagString: Buraco
   m_Icon: {fileID: 0}
@@ -3130,7 +3130,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 35
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3180,7 +3180,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3330,7 +3330,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 33
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3380,7 +3380,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 32
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3557,20 +3557,20 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 6
     m_Data: {fileID: -516530148, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -944134007, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
-  - m_RefCount: 6
-    m_Data: {fileID: -315075117, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1660235569, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -1963742698, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
+  - m_RefCount: 6
+    m_Data: {fileID: -315075117, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 6
     m_Data: {fileID: -2047161836, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 518960181, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
@@ -3615,14 +3615,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1963742698, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 518960181, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -944134007, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1660235569, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 44
     m_Data:
@@ -3769,7 +3769,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -3877,7 +3877,7 @@ GameObject:
   - component: {fileID: 3812505044238489564}
   - component: {fileID: 4565404212094030239}
   - component: {fileID: 2422258721507770104}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Paredes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6225,7 +6225,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:

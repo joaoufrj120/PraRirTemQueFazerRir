@@ -3021,7 +3021,7 @@ GameObject:
   - component: {fileID: 3812505044238489564}
   - component: {fileID: 4565404212094030239}
   - component: {fileID: 2422258721507770104}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Paredes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5389,7 +5389,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -5475,7 +5475,7 @@ GameObject:
   - component: {fileID: 1674064348748949480}
   - component: {fileID: 4707935674794488461}
   - component: {fileID: 4445336896898768611}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Buraco
   m_TagString: Buraco
   m_Icon: {fileID: 0}
@@ -5850,7 +5850,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 19
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 31
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6623,8 +6623,8 @@ Tilemap:
     m_Data: {fileID: -315075117, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1500619726, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -944134007, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 518960181, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
   - m_RefCount: 2
@@ -6647,8 +6647,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -944134007, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 588024811, guid: 71639702b6eb6cd489060f318ee8fa98, type: 3}
   m_TileMatrixArray:
@@ -6797,7 +6797,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
