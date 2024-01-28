@@ -111,12 +111,12 @@ public class RoomSpawner : MonoBehaviour
 
     void AddConnections(Dictionary<Vector2Int, LevelGenerator.Room> rooms){
         foreach(var item in _instantiatedRooms){
-            Debug.Log("aaaa");
+            //Debug.Log("aaaa");
             RoomManager roomManager = item.Value;
             Vector2Int position = item.Key;
 
             foreach(var neighbor in rooms[position].Neighbors){
-                Debug.Log("1");
+                //Debug.Log("1");
                 Vector2Int direction = neighbor.Key;
                 RoomManager realNeighbor = _instantiatedRooms[neighbor.Value];
 

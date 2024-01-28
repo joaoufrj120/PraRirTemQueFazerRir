@@ -43,6 +43,11 @@ public class LevelGenerator : MonoBehaviour
     private Dictionary<Vector2Int, Room> _mapRooms = new Dictionary<Vector2Int, Room>();
 
 
+    private void Start() {
+        Generate();
+    }
+
+
     [ContextMenu("Generate")]
     private void Generate(){
         

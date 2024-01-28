@@ -254,6 +254,7 @@ MonoBehaviour:
   TRB: {fileID: 2927854532743921721, guid: 6329a69069ff52b42b30451cd28ed063, type: 3}
   LRB: {fileID: 9003740368674060426, guid: 0f2454e964aebca49a4c410f32618cfb, type: 3}
   Cross: {fileID: 6601571941191030495, guid: 3f1951e446eadc04e9ae745b1680d174, type: 3}
+  _endPortal: {fileID: 0}
 --- !u!4 &827230716
 Transform:
   m_ObjectHideFlags: 0
@@ -300,22 +301,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _xMultiplier: 26
   _yMultiplier: 16
-  StartRoom: {fileID: 5760150106616620096, guid: b0ed6362d3ae6aa479d810c0340eddc6, type: 3}
-  T: {fileID: 5760150106616620096, guid: 300b7c5ceed8598499788309f0c5435c, type: 3}
-  L: {fileID: 5760150106616620096, guid: 94dfd95941ff6a149965cdce1ed89bf5, type: 3}
-  R: {fileID: 5760150106616620096, guid: ed95ec0921b4cb748959897be4b81833, type: 3}
-  B: {fileID: 5723279123718593387, guid: 3923fdc902905ed42a1eae7d27f801ee, type: 3}
-  TL: {fileID: 5760150106616620096, guid: a5df29a5139f5594989a909c418d0c6a, type: 3}
-  TR: {fileID: 5760150106616620096, guid: 8534d56b0a3aa7e4b8204bc3cf534f8a, type: 3}
-  TB: {fileID: 5760150106616620096, guid: 9ba621d81ff25a440b08c90e50db2f7e, type: 3}
-  LR: {fileID: 5760150106616620096, guid: 70a4fad6093154346b0139c140d7a2f4, type: 3}
-  LB: {fileID: 5760150106616620096, guid: 96b2eae3948108f44ba7dbf2c5f0f801, type: 3}
-  RB: {fileID: 5760150106616620096, guid: 3afe540cf985cbb4cab1c4cfad6a24c9, type: 3}
-  TLR: {fileID: 5760150106616620096, guid: 97e3f5ff30ce04a4fbfc80ce7dae3c3c, type: 3}
-  TLB: {fileID: 5760150106616620096, guid: af0858cda3fd0cc488e89ce3bb4a51a0, type: 3}
-  TRB: {fileID: 5760150106616620096, guid: a7ce16adffff9d54999ec1a16f7a87c9, type: 3}
-  LRB: {fileID: 5760150106616620096, guid: a098d5ce08d41c8438e1ddac3bddf9be, type: 3}
-  Cross: {fileID: 5760150106616620096, guid: 5c9f600da27f2e046b158f3fbf24dfca, type: 3}
+  StartRoom: {fileID: -4549470199726713011, guid: b0ed6362d3ae6aa479d810c0340eddc6, type: 3}
+  T: {fileID: 2653158065073189847, guid: 300b7c5ceed8598499788309f0c5435c, type: 3}
+  L: {fileID: -5156472002622680047, guid: 94dfd95941ff6a149965cdce1ed89bf5, type: 3}
+  R: {fileID: -8709952608316193960, guid: ed95ec0921b4cb748959897be4b81833, type: 3}
+  B: {fileID: 8695199725417358926, guid: 3923fdc902905ed42a1eae7d27f801ee, type: 3}
+  TL: {fileID: 159013470589595669, guid: a5df29a5139f5594989a909c418d0c6a, type: 3}
+  TR: {fileID: -1733236014148663538, guid: 8534d56b0a3aa7e4b8204bc3cf534f8a, type: 3}
+  TB: {fileID: -2312038980277993005, guid: 9ba621d81ff25a440b08c90e50db2f7e, type: 3}
+  LR: {fileID: 7461696576413531167, guid: 70a4fad6093154346b0139c140d7a2f4, type: 3}
+  LB: {fileID: 364636932924173914, guid: 96b2eae3948108f44ba7dbf2c5f0f801, type: 3}
+  RB: {fileID: 4529384033277929830, guid: 3afe540cf985cbb4cab1c4cfad6a24c9, type: 3}
+  TLR: {fileID: -4113989192068711998, guid: 97e3f5ff30ce04a4fbfc80ce7dae3c3c, type: 3}
+  TLB: {fileID: 6624101218431827126, guid: af0858cda3fd0cc488e89ce3bb4a51a0, type: 3}
+  TRB: {fileID: -1975637354854711048, guid: a7ce16adffff9d54999ec1a16f7a87c9, type: 3}
+  LRB: {fileID: 7360124338276282186, guid: a098d5ce08d41c8438e1ddac3bddf9be, type: 3}
+  Cross: {fileID: 6858028588926391688, guid: 5c9f600da27f2e046b158f3fbf24dfca, type: 3}
+  _endPortal: {fileID: 3090560403089212470, guid: 13c35ee9408c9914ab8db9e26a6fd4ae, type: 3}
 --- !u!4 &1349267353
 Transform:
   m_ObjectHideFlags: 0
@@ -379,4 +381,4 @@ MonoBehaviour:
   _minRooms: 5
   _roomSpawner: {fileID: 1349267352}
   _seed: 70
-  _useSeed: 1
+  _useSeed: 0
