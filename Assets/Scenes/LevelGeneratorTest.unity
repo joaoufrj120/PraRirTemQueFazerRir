@@ -207,6 +207,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &617547224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7834358480343754981, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_Name
+      value: A_
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754982, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834358480343754983, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
+      propertyPath: data.dataString
+      value: UEsDBBQAAAgIAACwn+uFTlnwXAIAABYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzqVjCCmmtxYI6SGBCe3k4ouQ1liDLHn0ESAZ/nu1so0dOj2xvH27+/ZD/iBC2QqY02ZlBH/SHMj3AUGbfBl0zkc40b1WW/EOLedVcFcgiUbOC3VCB3yEYVaX4IxgP9ReIjkJoFci16Zc8j3MtXU2wDmVFoLLaIfRKkAfA3IKP8MZhpyDNZ6i9R6sWTK4BJOBcmA6aktsaTXLKyZpWQFHyR05TVr6JKmJKrTTcFA601IK22gh7lzFXrdVAQawWS5oaC3WR3oBYl84lNmPXee5BddoMvS8ECZMqE5Kfup6bCW1h1rYG5Uey9yPJ+M0jarqvE//UIaj6M6NLh/b0qPYkysEO7zQM6PW9UbbhxeftXt1pPJAdxJeC1DPemW0Vzw4nfEY6i2MF93fa3fzAtihw2upN6Cv/r8g7OESB3CaS1Hu0PV1UgNbqePE4/rBhN38CoLjcdgmRUBRxR8Lv+m+f0WN40EY64Kr6VKhvJ32BqlkGWeG3Xg310ZBhBvRFSgq3XkT0rjbLd74emVvPA8U30tTvPG1z+AmJMIdP0luXBt9vC7LFvr4BLZYeyeFgk40Op7DnOZaqfrI+jNpw7be5JT1wvZe8M+nRe6ns9kU7lKa5iwZz9Ihm+Swm6X0G+c7trvLSbw9oUKfVG5qoc14wtZUl1yFO2s/I4OVoVU8eG7ocSXeS90buVC53jIDoNZ1hqtwMKFIeJd8yUUY0BacEyrum3xkRGp2AJ5dE2Wx0+XJGZp1WTJSiTftEMnIPH43MoLw9ZY3Bt4EHLF4m+xCLn8BUEsDBBQAAAgIAACwn+uyl/mabQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSqbmlpXmqsUWiRVqygZGlhW6ySVpqkqVFollKSlJyknGaUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACwn+uFTlnwXAIAABYFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACwn+uyl/mabQAAAHgAAAAJACQAAAAAAAAAAAAAAKkCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fefc8d8e3ea3cea4abc788a20f1fcd00, type: 3}
 --- !u!1 &827230714
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,4 +503,4 @@ MonoBehaviour:
   _minRooms: 5
   _roomSpawner: {fileID: 1349267352}
   _seed: 70
-  _useSeed: 0
+  _useSeed: 1
